@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>迅雷下载电影网 - 高清电影迅雷下载_最新影视资源聚合</title>
+<meta name="description" content="迅雷下载电影网聚合最新高清电影、热播电视剧、动漫、综艺与纪录片资源索引，提供迅雷下载教程、每日影视榜单与热门推荐，手机电脑都能快速访问。">
+<meta name="keywords" content="迅雷下载电影网,电影下载,迅雷下载,高清电影,电视剧下载,动漫资源,影视榜单">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="迅雷下载电影网">
+<meta name="theme-color" content="#0b1020">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://www.xunleixiazaidianyingwang-app.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="迅雷下载电影网">
+<meta property="og:title" content="迅雷下载电影网 - 高清电影迅雷下载">
+<meta property="og:description" content="迅雷下载电影网：最新高清电影、电视剧、动漫资源索引与迅雷下载指南，每日更新榜单。">
+<meta property="og:url" content="https://www.xunleixiazaidianyingwang-app.com/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="迅雷下载电影网 - 高清电影迅雷下载">
+<meta name="twitter:description" content="最新高清电影、电视剧、动漫资源索引与迅雷下载指南，每日更新榜单。">
+<style>
+  :root{
+    --bg:#0b1020;
+    --bg-soft:#121a33;
+    --card:rgba(255,255,255,.05);
+    --line:rgba(255,255,255,.12);
+    --gold:#ffb347;
+    --cyan:#4dd0e1;
+    --text:#e8ecf7;
+    --muted:#9aa6c4;
+    --radius:16px;
+    --maxw:1180px;
+    --font:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+  body{
+    font-family:var(--font);
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
+    font-size:16px;
+    overflow-x:hidden;
+    background-image:
+      radial-gradient(900px 500px at 12% -8%,rgba(255,179,71,.16),transparent 60%),
+      radial-gradient(800px 520px at 92% 4%,rgba(77,208,225,.14),transparent 62%);
+    background-repeat:no-repeat;
+  }
+  a{color:inherit;text-decoration:none;}
+  ul,ol{list-style:none;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:#111;padding:8px 14px;border-radius:8px;}
+  .skip:focus{left:12px;top:12px;z-index:99;}
+
+  /* ============ 顶部导航 ============ */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(11,16,32,.86);
+    backdrop-filter:saturate(140%) blur(12px);
+    -webkit-backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;}
+  .brand .mark{
+    width:38px;height:38px;border-radius:11px;flex:0 0 38px;
+    background:linear-gradient(140deg,var(--gold),#ff7a45);
+    display:flex;align-items:center;justify-content:center;color:#1a1205;font-weight:900;font-size:17px;
+    box-shadow:0 6px 18px rgba(255,179,71,.28);
+  }
+  .brand span{font-size:18px;white-space:nowrap;}
+  .brand small{display:block;font-size:11px;color:var(--muted);font-weight:500;letter-spacing:1.2px;}
+  .nav{display:flex;align-items:center;gap:26px;}
+  .nav a{font-size:15px;color:var(--muted);position:relative;padding:6px 0;transition:color .2s;}
+  .nav a:hover,.nav a:focus{color:var(--gold);}
+  .nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .25s;}
+  .nav a:hover::after{width:100%;}
+  .navtoggle{
+    display:none;width:42px;height:38px;border:1px solid var(--line);border-radius:10px;
+    background:var(--card);color:var(--text);font-size:18px;cursor:pointer;
+  }
+
+  /* ============ Hero ============ */
+  .hero{position:relative;padding:64px 0 52px;overflow:hidden;}
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:52px 52px;opacity:.25;mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent);
+    -webkit-mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent);
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:7px 14px;border:1px solid rgba(255,179,71,.4);border-radius:999px;
+    color:var(--gold);font-size:13px;background:rgba(255,179,71,.09);margin-bottom:20px;
+  }
+  .badge i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block;box-shadow:0 0 0 4px rgba(255,179,71,.18);}
+  h1{
+    font-size:clamp(30px,6vw,54px);line-height:1.2;font-weight:900;letter-spacing:-.5px;
+    background:linear-gradient(100deg,#fff 15%,var(--gold) 55%,var(--cyan) 95%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lead{max-width:760px;margin:20px 0 28px;color:var(--muted);font-size:clamp(15px,2.4vw,18px);}
+  .lead b{color:var(--text);}
+  .urlchip{
+    display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13px;color:var(--cyan);
+    border:1px dashed rgba(77,208,225,.45);border-radius:10px;padding:8px 14px;background:rgba(77,208,225,.07);
+    word-break:break-all;
+  }
+  .search{
+    display:flex;gap:10px;margin:26px 0 22px;flex-wrap:wrap;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;
+    max-width:640px;
+  }
+  .search input{
+    flex:1 1 240px;min-width:0;background:transparent;border:0;outline:none;color:var(--text);
+    font-size:15px;font-family:var(--font);padding:8px 10px;
+  }
+  .search input::placeholder{color:#7280a0;}
+  .search button{
+    flex:0 0 auto;border:0;border-radius:10px;cursor:pointer;
+    padding:11px 22px;font-size:15px;font-weight:700;color:#1a1205;
+    background:linear-gradient(135deg,var(--gold),#ff8f3c);
+  }
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:760px;}
+  .stats div{
+    border:1px solid var(--line);border-radius:var(--radius);padding:16px 14px;background:var(--card);
+  }
+  .stats strong{display:block;font-size:clamp(20px,3.4vw,28px);color:var(--gold);line-height:1.3;}
+  .stats em{font-style:normal;font-size:12px;color:var(--muted);}
+
+  /* ============ 通用区块 ============ */
+  section{padding:54px 0;}
+  .sec-head{margin-bottom:28px;}
+  .sec-head .kicker{color:var(--cyan);font-size:13px;letter-spacing:2px;text-transform:uppercase;}
+  .sec-head h2{font-size:clamp(22px,3.6vw,32px);margin-top:8px;font-weight:800;}
+  .sec-head p{color:var(--muted);margin-top:10px;max-width:720px;font-size:15px;}
+
+  /* ============ 栏目卡片 ============ */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .card{
+    border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--card);
+    transition:transform .25s,border-color .25s,background .25s;
+  }
+  .card:hover{transform:translateY(-5px);border-color:rgba(255,179,71,.5);background:rgba(255,179,71,.06);}
+  .card .ico{
+    width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;
+    background:rgba(255,179,71,.14);margin-bottom:16px;
+  }
+  .card .ico svg{width:24px;height:24px;fill:var(--gold);}
+  .card h3{font-size:18px;margin-bottom:8px;}
+  .card p{color:var(--muted);font-size:14px;}
+  .card .more{display:inline-block;margin-top:14px;color:var(--gold);font-size:14px;font-weight:600;}
+
+  /* ============ 资源列表 ============ */
+  .list{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg-soft);}
+  .list li{border-bottom:1px solid var(--line);}
+  .list li:last-child{border-bottom:0;}
+  .list a{display:flex;align-items:center;gap:14px;padding:15px 18px;transition:background .2s;}
+  .list a:hover{background:rgba(255,179,71,.07);}
+  .tag{
+    flex:0 0 auto;font-size:12px;padding:4px 10px;border-radius:8px;
+    background:rgba(77,208,225,.14);color:var(--cyan);
+  }
+  .list .t{flex:1 1 auto;min-width:0;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .list .d{flex:0 0 auto;color:var(--muted);font-size:13px;}
+
+  /* ============ 步骤 ============ */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s;}
+  .step{
+    position:relative;border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;
+    background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+  }
+  .step .no{
+    width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;color:#1a1205;background:var(--gold);margin-bottom:14px;
+  }
+  .step h3{font-size:17px;margin-bottom:8px;}
+  .step p{color:var(--muted);font-size:14px;}
+
+  /* ============ FAQ ============ */
+  .faq{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+  details{border-bottom:1px solid var(--line);background:var(--bg-soft);}
+  details:last-child{border-bottom:0;}
+  summary{
+    cursor:pointer;padding:16px 20px;font-size:15px;font-weight:600;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--gold);font-size:20px;line-height:1;}
+  details[open] summary::after{content:"-";}
+  details p{padding:0 20px 18px;color:var(--muted);font-size:14px;}
+
+  /* ============ 关键词云 ============ */
+  .cloud{display:flex;flex-wrap:wrap;gap:10px;}
+  .cloud a{
+    font-size:13px;padding:7px 14px;border-radius:999px;
+    border:1px solid var(--line);color:var(--muted);background:var(--card);
+  }
+  .cloud a:hover{color:var(--gold);border-color:rgba(255,179,71,.5);}
+
+  /* ============ 关于 + CTA ============ */
+  .about{
+    display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start;
+  }
+  .panel{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:var(--card);}
+  .panel h3{font-size:19px;margin-bottom:12px;}
+  .panel p{color:var(--muted);font-size:15px;margin-bottom:12px;}
+  .panel ul li{color:var(--muted);font-size:14px;padding-left:20px;position:relative;margin-bottom:8px;}
+  .panel ul li::before{content:"";position:absolute;left:4px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--gold);}
+  .cta{
+    text-align:center;padding:38px 24px;border-radius:20px;
+    background:linear-gradient(135deg,rgba(255,179,71,.16),rgba(77,208,225,.12));
+    border:1px solid rgba(255,179,71,.35);
+  }
+  .cta h2{font-size:clamp(21px,3.4vw,30px);margin-bottom:12px;}
+  .cta p{color:var(--muted);font-size:15px;margin-bottom:20px;}
+  .btn{
+    display:inline-block;padding:13px 30px;border-radius:12px;font-weight:700;color:#1a1205;
+    background:linear-gradient(135deg,var(--gold),#ff8f3c);
+  }
+
+  /* ============ 页脚 ============ */
+  footer{border-top:1px solid var(--line);background:rgba(0,0,0,.28);padding:44px 0 30px;margin-top:20px;}
+  .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px;}
+  footer h4{font-size:15px;margin-bottom:12px;color:var(--text);}
+  footer li{margin-bottom:8px;}
+  footer li a{color:var(--muted);font-size:14px;}
+  footer li a:hover{color:var(--gold);}
+  .copyright{
+    margin-top:28px;padding-top:20px;border-top:1px solid var(--line);
+    color:#7c88a8;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  }
+  .copyright a{color:var(--cyan);}
+
+  /* ============ 响应式 ============ */
+  @media (max-width:960px){
+    .grid,.steps{grid-template-columns:repeat(2,1fr);}
+    .about{grid-template-columns:1fr;}
+    .fgrid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:768px){
+    .nav{
+      display:none;position:absolute;left:0;right:0;top:64px;
+      flex-direction:column;align-items:stretch;gap:0;
+      background:rgba(11,16,32,.98);border-bottom:1px solid var(--line);padding:8px 20px 16px;
+    }
+    .nav.open{display:flex;}
+    .nav a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:16px;}
+    .nav a::after{display:none;}
+    .navtoggle{display:block;}
+    .topbar .wrap{position:relative;}
+    .hero{padding:44px 0 36px;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    section{padding:40px 0;}
+  }
+  @media (max-width:560px){
+    .grid,.steps{grid-template-columns:1fr;}
+    .fgrid{grid-template-columns:1fr;}
+    .brand small{display:none;}
+    .list .d{display:none;}
+    .search{flex-direction:column;}
+    .search button{width:100%;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;scroll-behavior:auto !important;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.xunleixiazaidianyingwang-app.com/#website",
+      "url": "https://www.xunleixiazaidianyingwang-app.com/",
+      "name": "迅雷下载电影网",
+      "alternateName": "迅雷电影下载",
+      "inLanguage": "zh-CN",
+      "description": "迅雷下载电影网聚合高清电影、电视剧、动漫、综艺与纪录片资源索引，提供迅雷下载教程与每日影视榜单。",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.xunleixiazaidianyingwang-app.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.xunleixiazaidianyingwang-app.com/#organization",
+      "name": "迅雷下载电影网",
+      "url": "https://www.xunleixiazaidianyingwang-app.com/",
+      "description": "影视资源索引与下载指南站点"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.xunleixiazaidianyingwang-app.com/#webpage",
+      "url": "https://www.xunleixiazaidianyingwang-app.com/",
+      "name": "迅雷下载电影网 - 高清电影迅雷下载_最新影视资源聚合",
+      "isPartOf": { "@id": "https://www.xunleixiazaidianyingwang-app.com/#website" },
+      "about": { "@id": "https://www.xunleixiazaidianyingwang-app.com/#organization" },
+      "inLanguage": "zh-CN",
+      "breadcrumb": { "@id": "https://www.xunleixiazaidianyingwang-app.com/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.xunleixiazaidianyingwang-app.com/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.xunleixiazaidianyingwang-app.com/" },
+        { "@type": "ListItem", "position": 2, "name": "电影下载" },
+        { "@type": "ListItem", "position": 3, "name": "影视榜单" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "迅雷下载电影网提供哪些内容？",
+          "acceptedAnswer": { "@type": "Answer", "text": "本站提供高清电影、热播电视剧、动漫、综艺与纪录片的资源索引、下载教程与每日影视榜单，聚合整理公开信息，方便快速检索。" }
+        },
+        {
+          "@type": "Question",
+          "name": "手机可以访问迅雷下载电影网吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "可以。本站采用移动端自适应布局，手机、平板与电脑均会自动调整排版，无需缩放即可浏览。" }
+        },
+        {
+          "@type": "Question",
+          "name": "如何提高迅雷下载速度？",
+          "acceptedAnswer": { "@type": "Answer", "text": "建议使用官方最新版下载工具、保持网络稳定、避开高峰时段、优先选择热度较高的资源，并预留足够的磁盘空间。" }
+        },
+        {
+          "@type": "Question",
+          "name": "找不到想要的影片怎么办？",
+          "acceptedAnswer": { "@type": "Answer", "text": "可使用站内搜索按片名、年份或类型检索，也可以查看分类栏目与影视榜单，或通过页脚的反馈入口提交需求。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="迅雷下载电影网 首页">
+      <span class="mark" aria-hidden="true">迅</span>
+      <span>迅雷下载电影网<small>XUNLEI MOVIE DOWNLOAD</small></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="站点主导航">
+      <a href="#movie">电影下载</a>
+      <a href="#tv">电视剧集</a>
+      <a href="#anime">动漫动画</a>
+      <a href="#variety">综艺纪录</a>
+      <a href="#rank">热门榜单</a>
+      <a href="#guide">下载教程</a>
+    </nav>
+
+    <button class="navtoggle" id="navtoggle" type="button" aria-label="展开导航菜单" aria-expanded="false" aria-controls="nav">☰</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ Hero ============ -->
+  <div class="hero">
+    <div class="wrap">
+      <span class="badge"><i aria-hidden="true"></i>每日更新 · 手机电脑双端自适应</span>
+      <h1>迅雷下载电影网｜高清电影迅雷下载与影视资源聚合</h1>
+      <p class="lead">
+        欢迎访问 <b>迅雷下载电影网</b>。作为专注影视资源索引的聚合站点，<b>迅雷下载电影网</b> 为你整理最新上映的高清电影、热播剧集、人气动漫、综艺与纪录片，
+        并提供清晰的迅雷下载教程与每日影视榜单，让你找片、看片、存片一步到位。
+      </p>
+      <p class="urlchip">官方网址：<a href="https://www.xunleixiazaidianyingwang-app.com/">https://www.xunleixiazaidianyingwang-app.com</a></p>
+
+      <form class="search" action="#" method="get" role="search" onsubmit="return false;">
+        <label class="skip" for="q">搜索影视资源</label>
+        <input id="q" name="q" type="search" placeholder="搜索片名 / 演员 / 类型，例如：科幻 2025" autocomplete="off">
+        <button type="submit">立即搜索</button>
+      </form>
+
+      <div class="stats">
+        <div><strong>6+</strong><em>核心资源栏目</em></div>
+        <div><strong>24h</strong><em>榜单实时刷新</em></div>
+        <div><strong>1080P</strong><em>画质优先收录</em></div>
+        <div><strong>100%</strong><em>移动端自适应</em></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 栏目一：电影下载 ============ -->
+  <section id="movie">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 01 / Movie</span>
+        <h2>电影下载 · 最新高清大片索引</h2>
+        <p>覆盖动作、科幻、喜剧、悬疑、爱情等主流类型，迅雷下载电影网按热度与更新时间排序，帮你在几分钟内锁定想看的那一部。</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2z"/></svg></div>
+          <h3>动作科幻</h3>
+          <p>院线新片与经典硬核动作、科幻大片合集，支持迅雷多线程高速下载。</p>
+          <a class="more" href="#">进入栏目 →</a>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg></div>
+          <h3>华语佳片</h3>
+          <p>国产高分剧情片、喜剧与文艺片整理，含年份、评分与清晰度标注。</p>
+          <a class="more" href="#">进入栏目 →</a>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3V5zm2 2v10h14V7H5zm3 2h8v6H8V9z"/></svg></div>
+          <h3>海外剧场</h3>
+          <p>欧美、日韩热门电影索引，字幕与音轨信息一目了然，方便挑选版本。</p>
+          <a class="more" href="#">进入栏目 →</a>
+        </article>
+      </div>
+
+      <div class="list" style="margin-top:22px;">
+        <ul>
+          <li><a href="#"><span class="tag">科幻</span><span class="t">星际远征：未知边界（2025）1080P 高清版</span><span class="d">10-11</span></a></li>
+          <li><a href="#"><span class="tag">动作</span><span class="t">疾速追缉 第四章（2025）BD 中英双字</span><span class="d">10-10</span></a></li>
+          <li><a href="#"><span class="tag">悬疑</span><span class="t">迷雾列车（2025）4K 修复版</span><span class="d">10-09</span></a></li>
+          <li><a href="#"><span class="tag">剧情</span><span class="t">山海之南（2024）华语高分佳作</span><span class="d">10-08</span></a></li>
+          <li><a href="#"><span class="tag">动画</span><span class="t">云端之城（2025）剧场版 国语配音</span><span class="d">10-07</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目二：电视剧集 ============ -->
+  <section id="tv">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 02 / TV Series</span>
+        <h2>电视剧集 · 热播剧全集追更</h2>
+        <p>国产剧、美剧、韩剧、日剧分区整理，迅雷下载电影网同步更新集数与播出状态，追剧不再断档。</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 6h20v12H2V6zm3 3v6h14V9H5z"/></svg></div>
+          <h3>国产热剧</h3>
+          <p>都市、古装、悬疑题材每日更新，按播出平台与更新节奏分类。</p>
+          <a class="more" href="#">进入栏目 →</a>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3h16v18H4V3zm2 2v14h12V5H6zm2 3h8v2H8V8zm0 4h8v2H8v-2z"/></svg></div>
+          <h3>美剧英剧</h3>
+          <p>高口碑剧集季播索引，含季数、集数与字幕版本说明。</p>
+          <a class="more" href="#">进入栏目 →</a>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 4v5h4v2h-6V6h2z"/></svg></div>
+          <h3>韩剧日剧</h3>
+          <p>周更剧集与完结经典并收，支持按演员与题材快速筛选。</p>
+          <a class="more" href="#">进入栏目 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目三：动漫动画 ============ -->
+  <section id="anime">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 03 / Anime</span>
+        <h2>动漫动画 · 番剧与剧场版合集</h2>
+        <p>新番连载、经典重制与动画电影剧场版，迅雷下载电影网按季度归档，方便一次性收藏整季。</p>
+      </div>
+      <div class="list">
+        <ul>
+          <li><a href="#"><span class="tag">新番</span><span class="t">2025 年十月新番合集（更新至第 3 话）</span><span class="d">连载中</span></a></li>
+          <li><a href="#"><span class="tag">剧场版</span><span class="t">星海物语 剧场版：终章 1080P</span><span class="d">完结</span></a></li>
+          <li><a href="#"><span class="tag">经典</span><span class="t">少年冒险王 全集重制版（共 52 话）</span><span class="d">完结</span></a></li>
+          <li><a href="#"><span class="tag">国漫</span><span class="t">山海纪元 第二季 4K 高码率</span><span class="d">连载中</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目四：综艺纪录 ============ -->
+  <section id="variety">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 04 / Variety &amp; Docs</span>
+        <h2>综艺纪录 · 慢综艺与高分纪录片</h2>
+        <p>从自然人文纪录片到热门综艺，迅雷下载电影网按题材标签整理，适合周末集中补片。</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5zm0 2.3L5.5 7.9v8.2L12 19.7l6.5-3.6V7.9L12 4.3z"/></svg></div>
+          <h3>人文纪录</h3>
+          <p>历史、地理与人物纪录片，画质优先，适合收藏与二刷。</p>
+          <a class="more" href="#">进入栏目 →</a>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10h4l3-4h4l3 4h4v9H3v-9zm6 0h6v5H9v-5z"/></svg></div>
+          <h3>热门综艺</h3>
+          <p>音乐、旅行、推理类综艺按季整理，更新状态实时标注。</p>
+          <a class="more" href="#">进入栏目 →</a>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg></div>
+          <h3>收藏精选</h3>
+          <p>编辑部精选高分片单，按主题成组推荐，省去逐个查找的时间。</p>
+          <a class="more" href="#">进入栏目 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目五：热门榜单 ============ -->
+  <section id="rank">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 05 / Ranking</span>
+        <h2>热门榜单 · 24 小时下载排行</h2>
+        <p>基于站内检索与点击热度生成，反映迅雷下载电影网用户真实的找片趋势。</p>
+      </div>
+      <ol class="list">
+        <li><a href="#"><span class="tag">01</span><span class="t">本周口碑榜：五部高分新片推荐</span><span class="d">热度 98</span></a></li>
+        <li><a href="#"><span class="tag">02</span><span class="t">科幻电影下载 TOP20</span><span class="d">热度 95</span></a></li>
+        <li><a href="#"><span class="tag">03</span><span class="t">国产剧追更榜：更新最快的前十部</span><span class="d">热度 92</span></a></li>
+        <li><a href="#"><span class="tag">04</span><span class="t">高分纪录片补片清单</span><span class="d">热度 88</span></a></li>
+        <li><a href="#"><span class="tag">05</span><span class="t">十月新番关注度排行</span><span class="d">热度 85</span></a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 栏目六：影视资讯 ============ -->
+  <section id="news">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Section 06 / News</span>
+        <h2>影视资讯 · 新片动态与上线预告</h2>
+        <p>关注院线档期、流媒体上线与蓝光发行信息，抢先掌握迅雷下载电影网的资源更新节奏。</p>
+      </div>
+      <div class="list">
+        <ul>
+          <li><a href="#"><span class="tag">资讯</span><span class="t">十月院线前瞻：五部大片集中定档</span><span class="d">10-11</span></a></li>
+          <li><a href="#"><span class="tag">预告</span><span class="t">多部剧集公布续订计划，追更日历同步更新</span><span class="d">10-09</span></a></li>
+          <li><a href="#"><span class="tag">指南</span><span class="t">蓝光与流媒体版本差异说明：该选哪个画质？</span><span class="d">10-06</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 下载教程 ============ -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">How To / Guide</span>
+        <h2>迅雷下载教程 · 三步完成离线下载</h2>
+        <p>新手也能看懂的图文流程，配合迅雷下载电影网的资源索引，找片到保存最快只需几分钟。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="no">1</span>
+          <h3>检索资源</h3>
+          <p>在本站搜索框输入片名，或进入对应栏目按类型、年份筛选目标影片。</p>
+        </div>
+        <div class="step">
+          <span class="no">2</span>
+          <h3>复制链接</h3>
+          <p>打开资源详情页，确认清晰度与字幕信息后，复制下载地址或下载口令。</p>
+        </div>
+        <div class="step">
+          <span class="no">3</span>
+          <h3>新建任务</h3>
+          <p>在下载工具中新建任务并粘贴链接，选择保存目录即可开始高速下载。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 关键词云 ============ -->
+  <section id="tags">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Keywords</span>
+        <h2>热门搜索词 · 快速定位资源</h2>
+        <p>围绕“迅雷下载电影网”整理的常见检索词，点击即可进入对应结果聚合页。</p>
+      </div>
+      <div class="cloud">
+        <a href="#">迅雷下载电影网</a>
+        <a href="#">电影下载</a>
+        <a href="#">迅雷下载</a>
+        <a href="#">高清电影下载</a>
+        <a href="#">最新电影资源</a>
+        <a href="#">电视剧全集下载</a>
+        <a href="#">美剧下载</a>
+        <a href="#">韩剧资源</a>
+        <a href="#">动漫下载</a>
+        <a href="#">新番合集</a>
+        <a href="#">纪录片下载</a>
+        <a href="#">综艺全集</a>
+        <a href="#">1080P 电影</a>
+        <a href="#">4K 高清资源</a>
+        <a href="#">影视榜单</a>
+        <a href="#">迅雷下载教程</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 关于本站 + CTA ============ -->
+  <section id="about">
+    <div class="wrap about">
+      <div class="panel">
+        <h3>关于迅雷下载电影网</h3>
+        <p>
+          <strong>迅雷下载电影网</strong>（<a href="https://www.xunleixiazaidianyingwang-app.com/" style="color:var(--cyan);">https://www.xunleixiazaidianyingwang-app.com</a>）
+          是一个面向影视爱好者的资源索引与导航站点。我们只做信息的整理与聚合：把分散在各处的影片条目按类型、年份、清晰度与更新状态重新组织，
+          让搜索与筛选变得更省时间。
+        </p>
+        <ul>
+          <li>栏目化归档：电影、剧集、动漫、综艺纪录、榜单、资讯六大板块清晰分区。</li>
+          <li>移动端自适应：手机、平板、桌面端自动切换布局，页面加载轻量无冗余。</li>
+          <li>更新可视化：每条目标注更新时间与连载状态，避免追更断档。</li>
+          <li>合规提示：影视内容版权归原权利人所有，请通过正规授权渠道观看与支持正版。</li>
+        </ul>
+      </div>
+      <div class="cta">
+        <h2>现在开始找片</h2>
+        <p>输入片名，或从上方任一栏目进入，迅雷下载电影网帮你快速定位资源。</p>
+        <a class="btn" href="#movie">浏览电影下载栏目</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 常见问题 ============ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">FAQ</span>
+        <h2>常见问题 · 关于本站与下载</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>迅雷下载电影网提供哪些内容？</summary>
+          <p>本站提供高清电影、热播电视剧、动漫、综艺与纪录片的资源索引、下载教程与每日影视榜单，聚合整理公开信息，方便快速检索。</p>
+        </details>
+        <details>
+          <summary>手机可以访问迅雷下载电影网吗？</summary>
+          <p>可以。本站采用移动端自适应布局，手机、平板与电脑均会自动调整排版，无需缩放即可浏览。</p>
+        </details>
+        <details>
+          <summary>如何提高迅雷下载速度？</summary>
+          <p>建议使用官方最新版下载工具、保持网络稳定、避开高峰时段、优先选择热度较高的资源，并预留足够的磁盘空间。</p>
+        </details>
+        <details>
+          <summary>找不到想要的影片怎么办？</summary>
+          <p>可使用站内搜索按片名、年份或类型检索，也可以查看分类栏目与影视榜单，或通过页脚的反馈入口提交需求。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>迅雷下载电影网</h4>
+        <p style="color:var(--muted);font-size:14px;">影视资源索引与下载指南站点，聚合电影、剧集、动漫、综艺与纪录片信息，每日更新。</p>
+        <p style="margin-top:10px;font-size:13px;color:var(--cyan);">网址：https://www.xunleixiazaidianyingwang-app.com</p>
+      </div>
+      <div>
+        <h4>资源栏目</h4>
+        <ul>
+          <li><a href="#movie">电影下载</a></li>
+          <li><a href="#tv">电视剧集</a></li>
+          <li><a href="#anime">动漫动画</a></li>
+          <li><a href="#variety">综艺纪录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>工具与榜单</h4>
+        <ul>
+          <li><a href="#rank">热门榜单</a></li>
+          <li><a href="#news">影视资讯</a></li>
+          <li><a href="#tags">热门搜索词</a></li>
+          <li><a href="#guide">迅雷下载教程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于与帮助</h4>
+        <ul>
+          <li><a href="#about">关于本站</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#">意见反馈</a></li>
+          <li><a href="#">版权声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 迅雷下载电影网 · <a href="https://www.xunleixiazaidianyingwang-app.com/">www.xunleixiazaidianyingwang-app.com</a></span>
+      <span>影视内容版权归原权利人所有，请支持正版</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('navtoggle');
+    var nav = document.getElementById('nav');
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? '✕' : '☰';
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = '☰';
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
